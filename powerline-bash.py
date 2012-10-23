@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import os
@@ -115,7 +115,7 @@ def get_git_status():
             if origin_status[0][0] == 'ahead':
                 origin_position += u'\u21E1'
 
-        if line.find('nothing to commit (working directory clean)') >= 0:
+        if line.find('nothing to commit') >= 0:
             has_pending_commits = False
         if line.find('Untracked files') >= 0:
             has_untracked_files = True
